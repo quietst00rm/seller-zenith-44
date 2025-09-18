@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Amazon Seller Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Brand Identity Colors */
+    --background: 220 14% 98%; /* Soft White #F9FAFB */
+    --foreground: 211 73% 14%; /* Deep Navy #0B1D3A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 211 73% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 211 73% 14%;
+
+    /* Primary - Deep Navy */
+    --primary: 211 73% 14%; /* #0B1D3A */
+    --primary-foreground: 220 14% 98%;
+    --primary-light: 211 73% 20%;
+    --primary-glow: 217 91% 60%; /* Bright Blue #2563EB */
+
+    /* Secondary - Bright Blue */
+    --secondary: 217 91% 60%; /* #2563EB */
+    --secondary-foreground: 220 14% 98%;
+    --secondary-light: 217 91% 80%;
+
+    /* Typography Scale (1.125x modular scale) */
+    --text-h1: 1.75rem; /* 28px */
+    --text-h1-line: 2.25rem; /* 36px */
+    --text-h2: 1.375rem; /* 22px */
+    --text-h2-line: 1.75rem; /* 28px */
+    --text-h3: 1.125rem; /* 18px */
+    --text-h3-line: 1.5rem; /* 24px */
+    --text-body: 0.875rem; /* 14px */
+    --text-body-line: 1.25rem; /* 20px */
+    --text-caption: 0.75rem; /* 12px */
+    --text-caption-line: 1rem; /* 16px */
+
+    /* Status colors */
+    --success: 142 71% 45%; /* Accent Green #22C55E */
+    --success-foreground: 220 14% 98%;
+    --success-light: 142 71% 85%;
+
+    --warning: 45 93% 58%; /* Yellow for medium priority */
+    --warning-foreground: 211 73% 14%;
+    --warning-light: 45 93% 85%;
+
+    --danger: 0 84% 60%; /* Red for high priority */
+    --danger-foreground: 220 14% 98%;
+    --danger-light: 0 84% 85%;
+
+    --info: 217 91% 60%; /* Bright Blue */
+    --info-foreground: 220 14% 98%;
+    --info-light: 217 91% 85%;
+
+    /* Neutral grays - Slate Gray based */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 13% 34%; /* Slate Gray #4B5563 */
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 211 73% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 14% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar colors - Deep Navy theme */
+    --sidebar-background: 211 73% 14%; /* Deep Navy */
+    --sidebar-foreground: 220 14% 98%;
+    --sidebar-primary: 217 91% 60%; /* Bright Blue */
+    --sidebar-primary-foreground: 220 14% 98%;
+    --sidebar-accent: 211 73% 20%;
+    --sidebar-accent-foreground: 220 14% 98%;
+    --sidebar-border: 211 73% 20%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Gradients using brand colors */
+    --gradient-primary: linear-gradient(135deg, hsl(211 73% 14%), hsl(211 73% 20%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
+    --gradient-dashboard: linear-gradient(135deg, hsl(220 14% 98%), hsl(220 14% 96%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 rgba(11, 29, 58, 0.1), 0 1px 2px 0 rgba(11, 29, 58, 0.06);
+    --shadow-card-hover: 0 10px 25px -3px rgba(11, 29, 58, 0.1), 0 4px 6px -2px rgba(11, 29, 58, 0.05);
+    --shadow-glow: 0 0 20px hsla(217, 91%, 60%, 0.3);
+
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+  }
+
+  .dark {
+    --background: 211 73% 14%;
+    --foreground: 220 14% 98%;
+
+    --card: 211 73% 18%;
+    --card-foreground: 220 14% 98%;
+
+    --popover: 211 73% 18%;
+    --popover-foreground: 220 14% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 211 73% 14%;
+
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 220 14% 98%;
+
+    --muted: 211 73% 20%;
+    --muted-foreground: 220 13% 60%;
+
+    --accent: 211 73% 20%;
+    --accent-foreground: 220 14% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 14% 98%;
+
+    --border: 211 73% 20%;
+    --input: 211 73% 20%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 211 73% 12%;
+    --sidebar-foreground: 220 14% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 14% 98%;
+    --sidebar-accent: 211 73% 18%;
+    --sidebar-accent-foreground: 220 14% 98%;
+    --sidebar-border: 211 73% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Typography classes */
+  .text-h1 {
+    font-size: var(--text-h1);
+    line-height: var(--text-h1-line);
+    font-weight: 700;
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: var(--text-h2-line);
+    font-weight: 600;
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3-line);
+    font-weight: 600;
+  }
+
+  .text-body {
+    font-size: var(--text-body);
+    line-height: var(--text-body-line);
+  }
+
+  .text-caption {
+    font-size: var(--text-caption);
+    line-height: var(--text-caption-line);
+  }
+
+  /* Tabular numbers for metrics */
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 100;
+    transition: top 0.3s ease;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+}

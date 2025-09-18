@@ -1,0 +1,4 @@
+project_id = "byaaliobjjdffkhnxytv"
+
+[functions.account-health-agent]
+verify_jwt = false
